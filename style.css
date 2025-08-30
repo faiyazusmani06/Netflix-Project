@@ -376,14 +376,16 @@ input[type="radio"] {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     nav .logo {
         width: 100px;
     }
     nav button {
         padding: 6px 12px;
         font-size: 12px;
+
     }
+   
     nav .lang-btn {
         padding: 6px 15px;
     }
@@ -403,7 +405,8 @@ input[type="radio"] {
     .email button {
         font-size: 1rem;
         padding: 10px 15px;
-        width: 100%;
+        width: 88%;
+        margin-top: 0.5rem;
     }
     .body-section {
         padding: 50px 3%;
@@ -429,3 +432,4 @@ input[type="radio"] {
         min-width: unset;
     }
 }
+
