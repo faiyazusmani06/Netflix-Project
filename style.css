@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://assets.nflxext.com/ffe/siteui/vlv3/d5157303-f32f-4f40-a63e-ed0ce1eeecbd/f9e83626-d62f-4cf6-92f7-08018e1548e3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+nav .logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+nav .logo img {
+    width: 100%;
+    display: block;
+}
+
+nav button {
+    border: 0;
+    outline: none;
+    background: #e50914;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+nav button:hover {
+    background: #c11119;
+}
+
+nav .lang-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+nav .lang-btn i {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 5%;
+}
+
+.header-text h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.header-text h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-text .email {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.email input {
+    flex-grow: 1;
+    padding: 16px 20px;
+    outline: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 4px;
+    background: rgba(20, 20, 20, 0.8);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff;
+    min-width: 250px;
+}
+
+.email input::placeholder {
+    color: #ccc;
+}
+
+.email button {
+    background: #e50914;
+    padding: 16px 20px;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+.email button:hover {
+    background: #c11119; 
+}
+
+.email button i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+/* Horizontal Rule */
+hr {
+    background: #222;
+    width: 100%;
+    height: 8px;
+    border: 0;
+    outline: 0;
+}
+
+/* Body Sections */
+.body-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 5%;
+    border-bottom: 8px solid #222;
+    gap: 20px;
+    text-align: left;
+}
+
+.body-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.text-col, .img-col {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.text-col h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.text-col p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.img-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 70px 5%;
+    text-align: center;
+    border-bottom: 8px solid #222;
+}
+
+.faq h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    border-radius: 4px;
+}
+
+label::after {
+    content: '+';
+    font-size: 2.2rem;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+    border-radius: 0 0 4px 4px;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.faq .email {
+    margin-top: 50px;
+}
+
+.faq small {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    padding: 50px 5% 20px;
+    color: #777;
+    text-align: left;
+}
+
+.footer h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer .col a:hover {
+    color: #ccc;
+}
+
+.footer .lang-btn {
+    margin-top: 20px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #777;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    .header-text h3 {
+        font-size: 1.2rem;
+    }
+    .header-text p {
+        font-size: 1rem;
+    }
+    .email button {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+    .body-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .body-section:nth-child(even) {
+        flex-direction: column;
+    }
+    .text-col, .img-col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .text-col h2 {
+        font-size: 2.2rem;
+    }
+    .text-col p {
+        font-size: 1.2rem;
+    }
+    .faq h2 {
+        font-size: 2.2rem;
+    }
+    .accordion li label {
+        font-size: 1.2rem;
+    }
+    label::after {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav .logo {
+        width: 100px;
+    }
+    nav button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    nav .lang-btn {
+        padding: 6px 15px;
+    }
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+    .header-text h3 {
+        font-size: 1rem;
+    }
+    .header-text p {
+        font-size: 0.9rem;
+    }
+    .email input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .email button {
+        font-size: 1rem;
+        padding: 10px 15px;
+        width: 100%;
+    }
+    .body-section {
+        padding: 50px 3%;
+    }
+    .text-col h2 {
+        font-size: 1.8rem;
+    }
+    .text-col p {
+        font-size: 1rem;
+    }
+    .faq h2 {
+        font-size: 1.8rem;
+    }
+    .accordion li label {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    label::after {
+        font-size: 1.5rem;
+    }
+    .footer .col {
+        flex-basis: 50%;
+        min-width: unset;
+    }
+}
